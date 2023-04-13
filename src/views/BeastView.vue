@@ -167,16 +167,16 @@ const gap = 10
 const gap2 = 20
 const drawApi = () => {
   if (canvas && ctx) {
-    // if (linkDown) linkOpacity = linkOpacity - 0.01
-    // else linkOpacity = linkOpacity + 0.01
-    // if (linkOpacity <= 0) {
-    //   linkDown = !linkDown
-    //   linkOpacity = 0
-    // }
-    // if (linkOpacity > 1) {
-    //   linkDown = !linkDown
-    //   linkOpacity = 1
-    // }
+    if (linkDown) linkOpacity = linkOpacity - 0.01
+    else linkOpacity = linkOpacity + 0.01
+    if (linkOpacity <= 0) {
+      linkDown = !linkDown
+      linkOpacity = 0
+    }
+    if (linkOpacity > 1) {
+      linkDown = !linkDown
+      linkOpacity = 1
+    }
 
     if (pos > 900) {
       pos = 0
