@@ -92,8 +92,15 @@ const drawWall = () => {
     ctx.fillStyle = '#02172c'
     ctx.fillRect(0, 0, cx / 3, canvasHeight)
 
-    ctx.fillStyle = '#02172c'
     ctx.fillRect(cx + (cx * 2) / 3, 0, cx / 3, canvasHeight)
+
+    ctx.fillRect(cx / 3, cy, cx / 3, cy / 3)
+
+    ctx.fillRect(cx / 3, (cy * 3) / 2, cx / 8, cy / 3)
+
+    ctx.fillRect((cx * 4) / 3, cy / 4, cx / 3, cy / 3)
+
+    ctx.fillRect((cx * 3) / 2, (cy * 4) / 3, cx / 3, cy / 3)
   }
 }
 
@@ -134,20 +141,23 @@ const drawLine = () => {
     ctx.lineTo(cx / 3, cy / 2)
 
     ctx.moveTo(cx, cy)
-    ctx.lineTo(cx / 3 + cx, cy / 2)
-    ctx.lineTo((cx * 2) / 3 + cx, cy / 2)
+    ctx.lineTo(cx / 5 + cx, cy / 3)
+    ctx.lineTo((cx * 2) / 3 + cx, cy / 3)
     //
     ctx.moveTo(cx, cy)
-    ctx.lineTo(cx / 3, cy)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5)
+    ctx.lineTo(cx / 3, (cy * 6) / 5)
+
     ctx.moveTo(cx, cy)
-    ctx.lineTo((cx * 2) / 3 + cx, cy)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5)
+    ctx.lineTo((cx * 2) / 3 + cx, (cy * 4) / 5)
     //
     ctx.moveTo(cx, cy)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy)
-    ctx.lineTo(cx / 3, cy / 2 + cy)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy)
+    ctx.lineTo(cx / 3, (cy * 2) / 3 + cy)
     ctx.moveTo(cx, cy)
     ctx.lineTo(cx / 3 + cx, cy / 2 + cy)
-    ctx.lineTo((cx * 2) / 3 + cx, cy / 2 + cy)
+    ctx.lineTo((cx * 3) / 4 + cx, cy / 2 + cy)
     ctx.stroke()
     ctx.closePath()
   }
@@ -186,33 +196,37 @@ const drawApi = () => {
     ctx.lineTo((cx * 2) / 3, cy / 2 + gap)
     ctx.lineTo(cx, cy + gap)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos, cy / 2 - gap)
-    ctx.lineTo(cx / 3 + cx, cy / 2 - gap)
+    ctx.moveTo((cx * 2) / 3 + cx + pos, cy / 3 - gap)
+    ctx.lineTo(cx / 5 + cx, cy / 3 - gap)
     ctx.lineTo(cx, cy - gap)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 30, cy / 2 + gap)
-    ctx.lineTo(cx / 3 + cx, cy / 2 + gap)
+    ctx.moveTo((cx * 2) / 3 + cx + pos + 30, cy / 3 + gap)
+    ctx.lineTo(cx / 5 + cx, cy / 3 + gap)
     ctx.lineTo(cx, cy + gap)
     //
-    ctx.moveTo(cx / 3 - pos, cy - gap)
+    ctx.moveTo(cx / 3 - pos, (cy * 6) / 5 - gap)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5 - gap)
     ctx.lineTo(cx, cy - gap)
 
-    ctx.moveTo(cx / 3 - pos + 30, cy + gap)
+    ctx.moveTo(cx / 3 - pos + 30, (cy * 6) / 5 + gap)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5 + gap)
     ctx.lineTo(cx, cy + gap)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos, cy - gap)
+    ctx.moveTo((cx * 2) / 3 + cx + pos, (cy * 4) / 5 - gap)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5 - gap)
     ctx.lineTo(cx, cy - gap)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 30, cy + gap)
+    ctx.moveTo((cx * 2) / 3 + cx + pos + 30, (cy * 4) / 5 + gap)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5 + gap)
     ctx.lineTo(cx, cy + gap)
     //
 
-    ctx.moveTo(cx / 3 - pos, cy / 2 + cy - gap)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy - gap)
+    ctx.moveTo(cx / 3 - pos, (cy * 2) / 3 + cy - gap)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy - gap)
     ctx.lineTo(cx, cy - gap)
 
-    ctx.moveTo(cx / 3 - pos + 30, cy / 2 + cy + gap)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy + gap)
+    ctx.moveTo(cx / 3 - pos + 30, (cy * 2) / 3 + cy + gap)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy + gap)
     ctx.lineTo(cx, cy + gap)
 
     ctx.moveTo((cx * 2) / 3 + cx + pos, cy / 2 + cy - gap)
@@ -244,33 +258,37 @@ const drawApi2 = () => {
     ctx.lineTo((cx * 2) / 3, cy / 2 + gap2)
     ctx.lineTo(cx, cy + gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 85, cy / 2 - gap2)
-    ctx.lineTo(cx / 3 + cx, cy / 2 - gap2)
+    ctx.moveTo((cx * 2) / 3 + cx + pos + 85, cy / 3 - gap2)
+    ctx.lineTo(cx / 5 + cx, cy / 3 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos - 5, cy / 2 + gap2)
-    ctx.lineTo(cx / 3 + cx, cy / 2 + gap2)
+    ctx.moveTo((cx * 2) / 3 + cx + pos - 5, cy / 3 + gap2)
+    ctx.lineTo(cx / 5 + cx, cy / 3 + gap2)
     ctx.lineTo(cx, cy + gap2)
     //
-    ctx.moveTo(cx / 3 - pos - 85, cy - gap2)
+    ctx.moveTo(cx / 3 - pos - 85, (cy * 6) / 5 - gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
-    ctx.moveTo(cx / 3 - pos + 5, cy + gap2)
+    ctx.moveTo(cx / 3 - pos + 5, (cy * 6) / 5 + gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5 + gap2)
     ctx.lineTo(cx, cy + gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 85, cy - gap2)
+    ctx.moveTo((cx * 2) / 3 + cx + pos + 85, (cy * 4) / 5 - gap2)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5 - gap)
     ctx.lineTo(cx, cy - gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos - 5, cy + gap2)
+    ctx.moveTo((cx * 2) / 3 + cx + pos - 5, (cy * 4) / 5 + gap2)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5 + gap)
     ctx.lineTo(cx, cy + gap2)
     //
 
-    ctx.moveTo(cx / 3 - pos - 85, cy / 2 + cy - gap2)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy - gap2)
+    ctx.moveTo(cx / 3 - pos - 85, (cy * 2) / 3 + cy - gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy - gap2)
     ctx.lineTo(cx, cy - gap2)
 
-    ctx.moveTo(cx / 3 - pos + 5, cy / 2 + cy + gap2)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy + gap2)
+    ctx.moveTo(cx / 3 - pos + 5, (cy * 2) / 3 + cy + gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy + gap2)
     ctx.lineTo(cx, cy + gap2)
 
     ctx.moveTo((cx * 2) / 3 + cx + pos + 85, cy / 2 + cy - gap2)
@@ -297,21 +315,23 @@ const drawApi3 = () => {
     ctx.lineTo((cx * 2) / 3, cy / 2 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 27, cy / 2 - gap2)
-    ctx.lineTo(cx / 3 + cx, cy / 2 - gap2)
+    ctx.moveTo((cx * 2) / 5 + cx + pos + 17, cy / 3 - gap2)
+    ctx.lineTo(cx / 5 + cx, cy / 3 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
     //
-    ctx.moveTo(cx / 3 - pos - 27, cy - gap2)
+    ctx.moveTo(cx / 3 - pos - 27, (cy * 6) / 5 - gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 27, cy - gap2)
+    ctx.moveTo((cx * 2) / 3 + cx + pos + 27, (cy * 4) / 5 - gap2)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
     //
 
-    ctx.moveTo(cx / 3 - pos - 27, cy / 2 + cy - gap2)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy - gap2)
+    ctx.moveTo(cx / 3 - pos - 27, (cy * 2) / 3 + cy - gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy - gap2)
     ctx.lineTo(cx, cy - gap2)
 
     ctx.moveTo((cx * 2) / 3 + cx + pos + 27, cy / 2 + cy - gap2)
@@ -335,21 +355,23 @@ const drawApi3_1 = () => {
     ctx.lineTo((cx * 2) / 3, cy / 2 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 26, cy / 2 - gap2)
-    ctx.lineTo(cx / 3 + cx, cy / 2 - gap2)
+    ctx.moveTo((cx * 2) / 5 + cx + pos + 16, cy / 3 - gap2)
+    ctx.lineTo(cx / 5 + cx, cy / 3 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
     //
-    ctx.moveTo(cx / 3 - pos - 26, cy - gap2)
+    ctx.moveTo(cx / 3 - pos - 26, (cy * 6) / 5 - gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 26, cy - gap2)
+    ctx.moveTo((cx * 2) / 3 + cx + pos + 26, (cy * 4) / 5 - gap2)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5 - gap2)
     ctx.lineTo(cx, cy - gap2)
 
     //
 
-    ctx.moveTo(cx / 3 - pos - 26, cy / 2 + cy - gap2)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy - gap2)
+    ctx.moveTo(cx / 3 - pos - 26, (cy * 2) / 3 + cy - gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy - gap2)
     ctx.lineTo(cx, cy - gap2)
 
     ctx.moveTo((cx * 2) / 3 + cx + pos + 26, cy / 2 + cy - gap2)
@@ -373,18 +395,20 @@ const drawApi4 = () => {
     ctx.lineTo((cx * 2) / 3, cy / 2 + gap2)
     ctx.lineTo(cx, cy + gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 112, cy / 2 + gap2)
-    ctx.lineTo(cx / 3 + cx, cy / 2 + gap2)
+    ctx.moveTo((cx * 2) / 5 + cx + pos + 102, cy / 3 + gap2)
+    ctx.lineTo(cx / 5 + cx, cy / 3 + gap2)
     ctx.lineTo(cx, cy + gap2)
     //
-    ctx.moveTo(cx / 3 - pos - 112, cy + gap2)
+    ctx.moveTo(cx / 3 - pos - 112, (cy * 6) / 5 + gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5 + gap2)
     ctx.lineTo(cx, cy + gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 112, cy + gap2)
+    ctx.moveTo((cx * 2) / 3 + cx + pos + 112, (cy * 4) / 5 + gap2)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5 + gap2)
     ctx.lineTo(cx, cy + gap2)
     //
-    ctx.moveTo(cx / 3 - pos - 112, cy / 2 + cy + gap2)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy + gap2)
+    ctx.moveTo(cx / 3 - pos - 112, (cy * 2) / 3 + cy + gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy + gap2)
     ctx.lineTo(cx, cy + gap2)
 
     ctx.moveTo((cx * 2) / 3 + cx + pos + 112, cy / 2 + cy + gap2)
@@ -408,18 +432,20 @@ const drawApi4_1 = () => {
     ctx.lineTo((cx * 2) / 3, cy / 2 + gap2)
     ctx.lineTo(cx, cy + gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 112, cy / 2 + gap2)
-    ctx.lineTo(cx / 3 + cx, cy / 2 + gap2)
+    ctx.moveTo((cx * 2) / 5 + cx + pos + 102, cy / 3 + gap2)
+    ctx.lineTo(cx / 5 + cx, cy / 3 + gap2)
     ctx.lineTo(cx, cy + gap2)
     //
-    ctx.moveTo(cx / 3 - pos - 112, cy + gap2)
+    ctx.moveTo(cx / 3 - pos - 112, (cy * 6) / 5 + gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 6) / 5 + gap2)
     ctx.lineTo(cx, cy + gap2)
 
-    ctx.moveTo((cx * 2) / 3 + cx + pos + 112, cy + gap2)
+    ctx.moveTo((cx * 2) / 3 + cx + pos + 112, (cy * 4) / 5 + gap2)
+    ctx.lineTo((cx * 5) / 4, (cy * 4) / 5 + gap2)
     ctx.lineTo(cx, cy + gap2)
     //
-    ctx.moveTo(cx / 3 - pos - 112, cy / 2 + cy + gap2)
-    ctx.lineTo((cx * 2) / 3, cy / 2 + cy + gap2)
+    ctx.moveTo(cx / 3 - pos - 112, (cy * 2) / 3 + cy + gap2)
+    ctx.lineTo((cx * 3) / 4, (cy * 2) / 3 + cy + gap2)
     ctx.lineTo(cx, cy + gap2)
 
     ctx.moveTo((cx * 2) / 3 + cx + pos + 112, cy / 2 + cy + gap2)
